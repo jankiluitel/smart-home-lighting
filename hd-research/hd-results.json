@@ -1,0 +1,102 @@
+[
+  {
+    "Architecture": "Baseline",
+    "Rooms": 100,
+    "Downstream Messages": 100,
+    "Reduction (%)": "0.00",
+    "Time (ms)": "8.552",
+    "Throughput (readings/s)": "11692.60",
+    "Memory Δ (MB)": "-0.657",
+    "Failed": 0
+  },
+  {
+    "Architecture": "Edge",
+    "Rooms": 100,
+    "Downstream Messages": 10,
+    "Reduction (%)": "90.00",
+    "Time (ms)": "0.291",
+    "Throughput (readings/s)": "344086.02",
+    "Memory Δ (MB)": "0.054",
+    "Failed": 0
+  },
+  {
+    "Architecture": "Baseline",
+    "Rooms": 500,
+    "Downstream Messages": 500,
+    "Reduction (%)": "0.00",
+    "Time (ms)": "0.563",
+    "Throughput (readings/s)": "888494.00",
+    "Memory Δ (MB)": "0.271",
+    "Failed": 0
+  },
+  {
+    "Architecture": "Edge",
+    "Rooms": 500,
+    "Downstream Messages": 50,
+    "Reduction (%)": "90.00",
+    "Time (ms)": "4.403",
+    "Throughput (readings/s)": "113553.55",
+    "Memory Δ (MB)": "-0.540",
+    "Failed": 0
+  },
+  {
+    "Architecture": "Baseline",
+    "Rooms": 1000,
+    "Downstream Messages": 1000,
+    "Reduction (%)": "0.00",
+    "Time (ms)": "1.052",
+    "Throughput (readings/s)": "950796.29",
+    "Memory Δ (MB)": "-0.054",
+    "Failed": 0
+  },
+  {
+    "Architecture": "Edge",
+    "Rooms": 1000,
+    "Downstream Messages": 100,
+    "Reduction (%)": "90.00",
+    "Time (ms)": "1.049",
+    "Throughput (readings/s)": "953629.75",
+    "Memory Δ (MB)": "-0.312",
+    "Failed": 0
+  },
+  {
+    "Architecture": "Baseline",
+    "Rooms": 5000,
+    "Downstream Messages": 5000,
+    "Reduction (%)": "0.00",
+    "Time (ms)": "11.668",
+    "Throughput (readings/s)": "428539.31",
+    "Memory Δ (MB)": "-0.171",
+    "Failed": 0
+  },
+  {
+    "Architecture": "Edge",
+    "Rooms": 5000,
+    "Downstream Messages": 500,
+    "Reduction (%)": "90.00",
+    "Time (ms)": "3.734",
+    "Throughput (readings/s)": "1339210.86",
+    "Memory Δ (MB)": "0.087",
+    "Failed": 0
+  },
+  {
+    "Architecture": "Baseline",
+    "Rooms": 10000,
+    "Downstream Messages": 10000,
+    "Reduction (%)": "0.00",
+    "Time (ms)": "13.592",
+    "Throughput (readings/s)": "735706.60",
+    "Memory Δ (MB)": "0.237",
+    "Failed": 0
+  },
+  {
+    "Architecture": "Edge",
+    "Rooms": 10000,
+    "Downstream Messages": 1000,
+    "Reduction (%)": "90.00",
+    "Time (ms)": "6.988",
+    "Throughput (readings/s)": "1431058.61",
+    "Memory Δ (MB)": "0.039",
+    "Failed": 0
+  }
+]

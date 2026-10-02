@@ -1,0 +1,264 @@
+const fs = require("fs");
+
+const svg = `
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="650"
+     viewBox="0 0 1200 650">
+
+  <defs>
+    <marker id="arrow"
+            markerWidth="10"
+            markerHeight="10"
+            refX="9"
+            refY="3"
+            orient="auto"
+            markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z"
+            fill="#333333"/>
+    </marker>
+  </defs>
+
+  <rect width="1200"
+        height="650"
+        fill="white"/>
+
+  <text x="600"
+        y="55"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="28"
+        font-weight="bold">
+    Edge-Based Smart Home IoT Architecture
+  </text>
+
+  <!-- Sensors -->
+  <rect x="70"
+        y="210"
+        width="230"
+        height="180"
+        rx="15"
+        fill="#EAF2F8"
+        stroke="#2874A6"
+        stroke-width="3"/>
+
+  <text x="185"
+        y="255"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="21"
+        font-weight="bold">
+    IoT Room Sensors
+  </text>
+
+  <text x="185"
+        y="295"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Motion
+  </text>
+
+  <text x="185"
+        y="325"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Light intensity
+  </text>
+
+  <text x="185"
+        y="355"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Occupancy
+  </text>
+
+
+  <!-- Edge Gateway -->
+  <rect x="400"
+        y="175"
+        width="300"
+        height="250"
+        rx="15"
+        fill="#E8F8F5"
+        stroke="#148F77"
+        stroke-width="4"/>
+
+  <text x="550"
+        y="220"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="22"
+        font-weight="bold">
+    Edge Gateway
+  </text>
+
+  <text x="550"
+        y="260"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Buffer sensor readings
+  </text>
+
+  <text x="550"
+        y="292"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Batch size = 10
+  </text>
+
+  <text x="550"
+        y="324"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Aggregate occupancy
+  </text>
+
+  <text x="550"
+        y="356"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Aggregate motion events
+  </text>
+
+  <text x="550"
+        y="388"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Average light intensity
+  </text>
+
+
+  <!-- Downstream -->
+  <rect x="800"
+        y="210"
+        width="300"
+        height="180"
+        rx="15"
+        fill="#FDF2E9"
+        stroke="#CA6F1E"
+        stroke-width="3"/>
+
+  <text x="950"
+        y="255"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="21"
+        font-weight="bold">
+    Downstream Service
+  </text>
+
+  <text x="950"
+        y="300"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Receives aggregated data
+  </text>
+
+  <text x="950"
+        y="335"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Processing / Storage
+  </text>
+
+  <text x="950"
+        y="370"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    Reduced message volume
+  </text>
+
+
+  <!-- Arrow sensor to gateway -->
+  <line x1="300"
+        y1="300"
+        x2="390"
+        y2="300"
+        stroke="#333333"
+        stroke-width="3"
+        marker-end="url(#arrow)"/>
+
+  <text x="345"
+        y="275"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="15">
+    Raw readings
+  </text>
+
+
+  <!-- Arrow gateway to downstream -->
+  <line x1="700"
+        y1="300"
+        x2="790"
+        y2="300"
+        stroke="#333333"
+        stroke-width="3"
+        marker-end="url(#arrow)"/>
+
+  <text x="745"
+        y="260"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="15">
+    Aggregated
+  </text>
+
+  <text x="745"
+        y="280"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="15">
+    messages
+  </text>
+
+
+  <!-- Bottom research explanation -->
+  <rect x="230"
+        y="500"
+        width="740"
+        height="90"
+        rx="10"
+        fill="#F7F7F7"
+        stroke="#777777"
+        stroke-width="2"/>
+
+  <text x="600"
+        y="535"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="18"
+        font-weight="bold">
+    Research Strategy
+  </text>
+
+  <text x="600"
+        y="568"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17">
+    10 raw sensor readings → 1 aggregated downstream message
+  </text>
+
+</svg>
+`;
+
+fs.writeFileSync(
+  "edge-architecture.svg",
+  svg
+);
+
+console.log(
+  "Architecture diagram created: edge-architecture.svg"
+);
